@@ -1,0 +1,37 @@
+{
+  "name": "proyecto_final_b1",
+  "version": "1.0.0",
+  "description": "Este proyecto es una API web desarrollada en NodeJS que facilita la gestión de ventas, productos en línea y diversas operaciones comerciales.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohanMiguel/Proyecto_Final_B1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/JohanMiguel/Proyecto_Final_B1/issues"
+  },
+  "homepage": "https://github.com/JohanMiguel/Proyecto_Final_B1#readme",
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.16.0",
+    "uuid": "^11.1.0"
+  }
+}
