@@ -115,8 +115,17 @@ export const updateCategory = async (req, res) => {
 export const deleteCategory = async (req, res) => {
     try {
         const { idCategory } = req.params;
-        const category = await Category.findOneAndDelete(idCategory);
 
+        const protectedCategoryId = "67c808fa76bc0328f9bc73b4";
+
+        if (idCategory === protectedCategoryId) {
+            return res.status(400).json({
+                success: false,
+                message: "No se puede eliminar esta categoría, GLOBAL"
+            });
+        }
+
+        const category = await Category.findOneAndDelete({ _id: idCategory });
 
         if (!category) {
             return res.status(404).json({
@@ -124,7 +133,7 @@ export const deleteCategory = async (req, res) => {
                 message: "Categoría no encontrada"
             });
         }
-       
+
         return res.status(200).json({
             success: true,
             message: "Categoría eliminada",
@@ -137,4 +146,4 @@ export const deleteCategory = async (req, res) => {
             error: err.message
         });
     }
-}
+};

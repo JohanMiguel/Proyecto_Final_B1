@@ -1,18 +1,5 @@
 [{
   "_id": {
-    "$oid": "67c80a887f75beae1140fca7"
-  },
-  "name": "Admin",
-  "surname": "Tojin",
-  "username": "admin_role",
-  "email": "admin@corporex.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$/3k2jMYyg8+WyBi3fXvpbQ$JP/mi+ilNOkSNPtKt8oCT+m8/d4nTDb2f5qAveIzL40",
-  "phone": "87654321",
-  "role": "ADMIN_ROLE",
-  "status": true
-},
-{
-  "_id": {
     "$oid": "67c80d167f75beae1140fcb5"
   },
   "name": "Lucia",
@@ -163,5 +150,18 @@
   "profilePicture": null,
   "phone": "75321489",
   "role": "CLIENT_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8d0dfd50ae3d49693a6c9"
+  },
+  "name": "Admin",
+  "surname": "Tojin",
+  "username": "admin_role",
+  "email": "admin@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$jzTkZyuSBGtntomcA/Uk1w$v7AqFYzfczjF3RQVdIjzX1GYF5FQyhdBiXAVMT7N6kM",
+  "phone": "87654321",
+  "role": "ADMIN_ROLE",
   "status": true
 }]

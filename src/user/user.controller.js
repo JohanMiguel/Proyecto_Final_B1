@@ -17,7 +17,7 @@ export const initializeAdminUser = async () => {
                 name: "Admin",
                 surname: "Tojin",
                 username: "admin_role",
-                email: "admin@corporex.com",
+                email: "admin@gmail.com",
                 password: hashedPassword,
                 phone: "87654321",
                 role: "ADMIN_ROLE",
@@ -86,24 +86,39 @@ export const getUsers = async (req, res) => {
 
 // Eliminar User
 export const deleteUser = async (req, res) => {
-    try{
-        const { uid } = req.params
-        
-        const user = await User.findByIdAndUpdate(uid, {status: false}, {new: true})
+    try {
+        const { uid } = req.params;
+
+        const protectedUserId = "67c8d0dfd50ae3d49693a6c9";
+
+        if (uid === protectedUserId) {
+            return res.status(400).json({
+                success: false,
+                message: "No se puede desactivar este usuario especial"
+            });
+        }
+        const user = await User.findByIdAndUpdate(uid, { status: false }, { new: true });
+
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "Usuario no encontrado"
+            });
+        }
 
         return res.status(200).json({
             success: true,
-            message: "Usuario eliminado",
+            message: "Usuario desactivado",
             user
-        })
-    }catch(err){
+        });
+    } catch (err) {
         return res.status(500).json({
             success: false,
-            message: "Error al eliminar el usuario",
+            message: "Error al desactivar el usuario",
             error: err.message
-        })
+        });
     }
-}
+};
 
 // Actualizar Contraseña
 export const updatePassword = async (req, res) => {

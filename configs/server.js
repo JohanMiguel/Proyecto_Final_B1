@@ -13,12 +13,30 @@ import categoryRoutes from "../src/category/category.routes.js"
 import productRoutes from "../src/product/product.routes.js"
 import cartRoutes from "../src/cart/cart.routes.js"
 import billRoutes from "../src/bill/bill.routes.js"
+import apiLimiter from "../src/middlewares/rate-limit-validator.js";
+import { swaggerDocs, swaggerUi } from "./swagger.js";
+
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))
     app.use(express.json())
-    app.use(cors())
-    app.use(helmet())
+    app.use(cors({
+        origin: '*', 
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+        allowedHeaders: ['Content-Type', 'Authorization']
+    }));
+    app.use(helmet({
+        contentSecurityPolicy: {
+            directives: {
+                defaultSrc: ["'self'"],
+                scriptSrc: ["'self'", "'unsafe-inline'", `http://localhost:${process.env.PORT}`],
+                connectSrc: ["'self'", `http://localhost:${process.env.PORT}`],
+                imgSrc: ["'self'", "data:"],
+                styleSrc: ["'self'", "'unsafe-inline'"],
+            },
+        },
+    }));
     app.use(morgan("dev"))
+    app.use(apiLimiter)
 }
 
 const routes = (app) =>{
@@ -28,6 +46,7 @@ const routes = (app) =>{
     app.use("/shopflow/v1/product", productRoutes)
     app.use("/shopflow/v1/cart", cartRoutes)
     app.use("/shopflow/v1/bill", billRoutes)
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
 const conectarDB = async () =>{
