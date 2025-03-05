@@ -1,4 +1,5 @@
 import User from "../user/user.model.js"
+import Category from "../category/category.model.js"
 
 
 export const emailExists = async (email = "") => {
@@ -22,3 +23,9 @@ export const userExists = async (uid = " ") => {
     }
 }
 
+export const categoryExists = async (uid = " ") => {
+    const existe = await Category.findById(uid)
+    if(!existe){
+        throw new Error("No existe La categoria con el ID proporcionado")
+    }
+}
