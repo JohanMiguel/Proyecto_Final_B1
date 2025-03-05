@@ -61,3 +61,24 @@ Este documento contiene las credenciales necesarias para acceder a los diferente
 ---
 
 🔒 **Asegura la privacidad y seguridad de las credenciales al manejar este documento.**
+
+### **Proceso de compra**
+- **URL**: `http://127.0.0.1:3001/shopflow/v1/cart/comprar`
+- **userID**: `67c80d167f75beae1140fcb5`
+Puedes agregar lo que quiera, Puedes remplazar los Productos y las cantidades 
+- **productID**: `67c81638f721957672aec56a`
+- **canttidad**: `15`
+
+### **Editar Carrito- Cantidades de Producto**
+- **URL**: `http://127.0.0.1:3001/shopflow/v1/bill/generarFactura/(userId)`
+- **productId**: `(Id Producto)`
+- **newQuantity**: `newva Cantidad en Numero:`
+
+
+### **Proceso de Factura**
+
+
+- **URL**: `http://127.0.0.1:3001/shopflow/v1/bill/generarFactura/(userId)`
+- **name**: `A nombre de (Juan Pére)`
+- **nit**: `1234567890`
+- **date**: `2025-03-05`
