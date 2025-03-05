@@ -5,6 +5,9 @@ import cors from "cors"
 import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
+import {initializeAdminUser } from "../src/user/user.controller.js"
+import authRoutes from "../src/auth/auth.routes.js"
+import userRoutes from "../src/user/user.routes.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))
@@ -15,12 +18,14 @@ const middlewares = (app) => {
 }
 
 const routes = (app) =>{
-
+    app.use("/shopflow/v1/auth", authRoutes)
+    app.use("/shopflow/v1/user", userRoutes)
 }
 
 const conectarDB = async () =>{
     try{
         await dbConnection()
+        await initializeAdminUser()
     }catch(err){
         console.log(`❌Database connection failed: ${err}`)
         process.exit(1)
