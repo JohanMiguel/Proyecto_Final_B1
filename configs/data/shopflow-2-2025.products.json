@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "67c816107211bb4ea6e760e7"
+  },
+  "name": "Palitos",
+  "description": "Nachos nueva Presentacion",
+  "price": 1.5,
+  "stock": 120,
+  "category": {
+    "$oid": "67c814010bc6626839206e3a"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c81638f721957672aec56a"
+  },
+  "name": "Refresco",
+  "description": "Bebida refrescante de cola.",
+  "price": 2,
+  "stock": 200,
+  "category": {
+    "$oid": "67c814010bc6626839206e3a"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c81686f721957672aec56d"
+  },
+  "name": "Cola",
+  "description": "Gaseosa refrescante de cola.",
+  "price": 1.2,
+  "stock": 150,
+  "category": {
+    "$oid": "67c814010bc6626839206e3a"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8168cf721957672aec570"
+  },
+  "name": "Sprite",
+  "description": "Gaseosa refrescante de limón.",
+  "price": 1.3,
+  "stock": 180,
+  "category": {
+    "$oid": "67c814010bc6626839206e3a"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c81695f721957672aec573"
+  },
+  "name": "Lager",
+  "description": "Cerveza Lager suave.",
+  "price": 2.5,
+  "stock": 200,
+  "category": {
+    "$oid": "67c8143a0bc6626839206e3d"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8169bf721957672aec576"
+  },
+  "name": "IPA",
+  "description": "Cerveza IPA con sabor amargo.",
+  "price": 3,
+  "stock": 120,
+  "category": {
+    "$oid": "67c8143a0bc6626839206e3d"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c816a4f721957672aec579"
+  },
+  "name": "Naranja",
+  "description": "Jugo natural de naranja.",
+  "price": 1.8,
+  "stock": 220,
+  "category": {
+    "$oid": "67c814430bc6626839206e40"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c816acf721957672aec57c"
+  },
+  "name": "Manzana",
+  "description": "Jugo natural de manzana.",
+  "price": 1.7,
+  "stock": 190,
+  "category": {
+    "$oid": "67c814430bc6626839206e40"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c816b2f721957672aec57f"
+  },
+  "name": "Evian",
+  "description": "Agua mineral natural.",
+  "price": 1,
+  "stock": 300,
+  "category": {
+    "$oid": "67c8144e0bc6626839206e43"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c816b8f721957672aec582"
+  },
+  "name": "AquaPura",
+  "description": "Agua purificada en botella.",
+  "price": 1.2,
+  "stock": 250,
+  "category": {
+    "$oid": "67c8144e0bc6626839206e43"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c816c1f721957672aec585"
+  },
+  "name": "Chicles",
+  "description": "Chicles de menta fresca.",
+  "price": 0.5,
+  "stock": 500,
+  "category": {
+    "$oid": "67c808fa76bc0328f9bc73b4"
+  },
+  "status": true
+}]

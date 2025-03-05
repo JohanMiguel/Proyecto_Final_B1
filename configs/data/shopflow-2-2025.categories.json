@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "67c808fa76bc0328f9bc73b4"
+  },
+  "name": "Global",
+  "description": "Categoria por defecto",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c814010bc6626839206e3a"
+  },
+  "name": "Gaseosa",
+  "description": "Todo tipo de Gaseosa aqui.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8143a0bc6626839206e3d"
+  },
+  "name": "Cerveza",
+  "description": "Cerveza artesanal de diferentes sabores.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c814430bc6626839206e40"
+  },
+  "name": "Jugo",
+  "description": "Jugo natural de frutas frescas.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8144e0bc6626839206e43"
+  },
+  "name": "Agua",
+  "description": "Agua mineral purificada.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c814610bc6626839206e46"
+  },
+  "name": "Vino",
+  "description": "Vinos finos de diferentes variedades.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c814980bc6626839206e49"
+  },
+  "name": "Laptop",
+  "description": "Computadora portátil, ideal para movilidad.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c814ae0bc6626839206e4e"
+  },
+  "name": "Smartphone",
+  "description": "Dispositivos móviles inteligentes.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c814c60bc6626839206e53"
+  },
+  "name": "Monitor",
+  "description": "Para conectar computadoras.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c814fd7211bb4ea6e760de"
+  },
+  "name": "Headphones",
+  "description": "Auriculares para escuchar sonido de manera privada.",
+  "products": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8150f7211bb4ea6e760e1"
+  },
+  "name": "SSD",
+  "description": "Dispositivo de almacenamiento con memoria flash, más rápido que los discos duros.",
+  "products": [],
+  "status": true
+}]

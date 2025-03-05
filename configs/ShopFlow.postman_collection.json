@@ -1,0 +1,912 @@
+{
+	"info": {
+		"_postman_id": "e0ea6862-96a6-413d-8401-7ec1c38e3a0c",
+		"name": "ShopFlow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37634162"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Basilia",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Peres",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "basilia2025",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "basilia@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "BasiTo$25",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "phone",
+									"value": "65237845",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "CLIENT_ROLE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   // \"username\": \"admin_role\",\r\n    \"email\": \"admin@corporex.com\",\r\n    \"password\":\"ADMINJtojin$sin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMDc1MzA2ODhlNmMwM2E1OTUyYWYiLCJpYXQiOjE3MzkzOTI4ODYsImV4cCI6MTczOTM5NjQ4Nn0.RK0m6IMq-zw5c-v6PlQ_4mgPY8Rlvg0IkNrZ_75QDSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/user/findUser/67ad04acab04d6a07ab74732",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"user",
+								"findUser",
+								"67ad04acab04d6a07ab74732"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMmE4MTBiZGYyYzU5Yzk4OTI1NGIiLCJpYXQiOjE3Mzk0MDE4OTIsImV4cCI6MTczOTQwNTQ5Mn0.49K9rb2OzJiyiS6LZmSkBh6-VbnB94PCU2cH39lcmCk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/user/deleteUser/67ad07530688e6c03a5952af",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"user",
+								"deleteUser",
+								"67ad07530688e6c03a5952af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/user/updatePassword/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"user",
+								"updatePassword",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMmE4MTBiZGYyYzU5Yzk4OTI1NGIiLCJpYXQiOjE3Mzk0MDE4OTIsImV4cCI6MTczOTQwNTQ5Mn0.49K9rb2OzJiyiS6LZmSkBh6-VbnB94PCU2cH39lcmCk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/user/updateUser/67ad2a810bdf2c59c989254b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"user",
+								"updateUser",
+								"67ad2a810bdf2c59c989254b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATEGORY",
+			"item": [
+				{
+					"name": "Agregar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4MGE4ODdmNzViZWFlMTE0MGZjYTciLCJpYXQiOjE3NDExNjU0MjksImV4cCI6MTc0MTE2OTAyOX0.UQIgNDlQJ5NbPFmDpVHMd6_aukT1M5iOpu6E-nQZ6s4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"SSD\",\r\n    \"description\": \"Dispositivo de almacenamiento con memoria flash, más rápido que los discos duros.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/category/saveCategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"category",
+								"saveCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/category/buscarCategory/Snacks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"category",
+								"buscarCategory",
+								"Snacks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmIzNTY0ZDU4NzBmNmEzNDg2NWIiLCJpYXQiOjE3NDEwNzAzOTQsImV4cCI6MTc0MTA3Mzk5NH0.1iaVAs6VsKTXPWY9G4698cCpl3h9ZqGrFftQtGzEvCs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pepsi\",\r\n    \"description\": \"pepsi de medio litro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/category/updateCategoria/67c6a06c558f1a86ecaedaae",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"category",
+								"updateCategoria",
+								"67c6a06c558f1a86ecaedaae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMmE4MTBiZGYyYzU5Yzk4OTI1NGIiLCJpYXQiOjE3NDExMjcxNDYsImV4cCI6MTc0MTEzMDc0Nn0.zPE0L2poVbGBCltX3M4TmwyHVZBlZX1YjNtVnLAQz1E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/category/deleteCategory/67bf7470b03215c31eefa196",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"category",
+								"deleteCategory",
+								"67bf7470b03215c31eefa196"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCT",
+			"item": [
+				{
+					"name": "Agregar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmIzNTY0ZDU4NzBmNmEzNDg2NWIiLCJpYXQiOjE3NDEwNTY4NTAsImV4cCI6MTc0MTA2MDQ1MH0.J6_VJBjdeItat6OT210Nmbq1WBSIF2D8ObkEBxPYsas",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Palitos\",\r\n    \"description\": \"nachos nueva Presentacion\",\r\n    \"price\": \"1.5\",\r\n    \"stock\": \"120\",\r\n    \"category\": \"67c66c6664d5870f6a34866c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/product/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtros",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/product/filtros?filtro=altos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"product",
+								"filtros"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "pepsi",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "Gaseosa",
+									"disabled": true
+								},
+								{
+									"key": "filtro",
+									"value": "agotados",
+									"disabled": true
+								},
+								{
+									"key": "filtro",
+									"value": "altos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmIzNTY0ZDU4NzBmNmEzNDg2NWIiLCJpYXQiOjE3NDEwNjA0MTMsImV4cCI6MTc0MTA2NDAxM30.4jDsP-5ZS5mNeL_OT09ITb8KwRyfP_XdbbMkEE0toWc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nochitos\",\r\n    \"description\": \"nachitos nueva Presentacion\",\r\n    \"price\": \"7\",\r\n    \"stock\": \"24\",\r\n    \"category\": \"67c66c6664d5870f6a34866c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/product/update/67c66b6464d5870f6a348660",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"product",
+								"update",
+								"67c66b6464d5870f6a348660"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmIzNTY0ZDU4NzBmNmEzNDg2NWIiLCJpYXQiOjE3NDEwNjA0MTMsImV4cCI6MTc0MTA2NDAxM30.4jDsP-5ZS5mNeL_OT09ITb8KwRyfP_XdbbMkEE0toWc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/product/delete/67c66b6464d5870f6a348660",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"product",
+								"delete",
+								"67c66b6464d5870f6a348660"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Comprar Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"67c80d167f75beae1140fcb5\",\r\n  //comprar productos\r\n  \"productId\": \"67c81638f721957672aec56a\",\r\n  \"quantity\": 15\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/cart/comprar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"cart",
+								"comprar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/cart/carrito/64f5a8b2e4a6c2d5e1a3b0f7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"cart",
+								"carrito",
+								"64f5a8b2e4a6c2d5e1a3b0f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Cantidades",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmIzNTY0ZDU4NzBmNmEzNDg2NWIiLCJpYXQiOjE3NDEwNjA0MTMsImV4cCI6MTc0MTA2NDAxM30.4jDsP-5ZS5mNeL_OT09ITb8KwRyfP_XdbbMkEE0toWc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"67c66cc364d5870f6a348671\",\r\n  \"newQuantity\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/cart/modificar-cantidad/64f5a8b2e4a6c2d5e1a3b0f7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"cart",
+								"modificar-cantidad",
+								"64f5a8b2e4a6c2d5e1a3b0f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Producto del Carrito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"67c6767d38abad6a50f18886\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/cart/eliminar/64f5a8b2e4a6c2d5e1a3b0f7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"cart",
+								"eliminar",
+								"64f5a8b2e4a6c2d5e1a3b0f7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facturacion",
+			"item": [
+				{
+					"name": "Generar Factura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Juan Pérez\",\r\n  \"nit\": \"1234567890\",\r\n  \"date\": \"2025-03-05\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/bill/generarFactura/67c833705444016615b200bd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"bill",
+								"generarFactura",
+								"67c833705444016615b200bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Facturas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Juan Pérez\",\r\n  \"nit\": \"1234567890\",\r\n  \"date\": \"2025-03-05\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/shopflow/v1/bill/listFacturas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"shopflow",
+								"v1",
+								"bill",
+								"listFacturas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
